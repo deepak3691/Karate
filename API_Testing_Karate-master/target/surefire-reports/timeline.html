@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-2"},{"id":2,"content":"ForkJoinPool-1-worker-1"},{"id":3,"content":"ForkJoinPool-1-worker-3"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"users[1:9]","start":5148,"end":13306,"title":"users[1:9] 05:30:05.148-05:30:13.306 get all users and then get the first user by id"},{"id":2,"group":2,"content":"authorizationToken[1:7]","start":5148,"end":12651,"title":"authorizationToken[1:7] 05:30:05.148-05:30:12.651 Generate OAuth 2.0 Token"},{"id":3,"group":3,"content":"operationName_v2_0[1:39]","start":5148,"end":12230,"title":"operationName_v2_0[1:39] 05:30:05.148-05:30:12.230 get user by id"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

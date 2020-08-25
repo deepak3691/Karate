@@ -1,0 +1,12 @@
+<testsuite failures="0" name="reusableFeatures/authorizationToken.feature" skipped="0" tests="1" time="7.431615">
+  <testcase classname="reusableFeatures.authorizationToken" name="Generate OAuth 2.0 Token" time="7.431615">
+    <system-out>* url 'https://reqres.in/api/register' .................................... passed
+Given path 'toke' ......................................................... passed
+And form field grand_type = 'client_credentials' .......................... passed
+And form field client_id = '' ............................................. passed
+And form field client_secret = '' ......................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+* def accessToken = response.access_token ................................. passed</system-out>
+  </testcase>
+</testsuite>

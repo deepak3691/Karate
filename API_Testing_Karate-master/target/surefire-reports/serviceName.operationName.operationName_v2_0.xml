@@ -1,0 +1,9 @@
+<testsuite failures="0" name="serviceName/operationName/operationName_v2_0.feature" skipped="0" tests="1" time="6.999452">
+  <testcase classname="serviceName.operationName.operationName_v2_0" name="get user by id" time="6.999452">
+    <system-out>* url 'https://jsonplaceholder.typicode.com' .............................. passed
+Given path 'users' ........................................................ passed
+And param id = '1' ........................................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>
